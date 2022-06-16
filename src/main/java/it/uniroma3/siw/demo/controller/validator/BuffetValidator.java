@@ -24,6 +24,10 @@ public class BuffetValidator implements Validator {
 		if(buffetService.alreadyExists((Buffet) b)) {
 			errors.reject("buffet.duplicato");
 		}
+		Buffet buff = (Buffet) b;
+		if(buff.getChef()==null) {
+			errors.reject("buffet.noChef");
+		}
 	}
 
 }
