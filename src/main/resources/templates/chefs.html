@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="static/css/my-style.css" rel="stylesheet">
+	<title>Elenco chef</title>
+</head>
+<body>
+	<header><h1>Catering Demo</h1></header>
+	<br>
+	<br>
+    <h2>Elenco chef inseriti:</h2>
+	<br>
+	<div class="scatola">
+		<table>
+			<tr>
+				<th>Nome</th><th>Cognome</th><th></th><th></th><th></th>
+			</tr>
+			<tr th:each="chef : ${chefs}">
+			<td th:text="${chef.nome}">nome</td>
+			<td th:text="${chef.cognome}">cognome</td>
+			<td><a href="chef.html" th:href="@{'/chef' + '/' + ${chef.id} }" th:text="dettagli">dettagli</a></td>
+			<td><a href="chef.html" th:href="@{'/toUpdateChef' + '/' + ${chef.id} }" th:text="modifica">modifica</a></td>
+			<td><a href="chef.html" th:href="@{'/toDeleteChef' + '/' + ${chef.id} }" th:text="elimina">elimina</a></td>
+		</table>
+	</div>
+    <footer><a href="/">Torna alla HomePage</a></footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="/css/my-style.css" rel="stylesheet">
+	<title>Dettagli persona</title>
+</head>
+<body>
+    <div>
+    	<h4>Dettagli persona</h4>
+		<div>
+			<span th:text="${persona.nome}">nome</span>
+			<span th:text="${persona.cognome}">cognome</span>
+			<span th:text="${persona.eta}">età</span>
+   		</div>
+    </div>
+    <footer><a href="/">Home</a></footer>
+</body>
+</html>

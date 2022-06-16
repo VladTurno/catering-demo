@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="static/css/my-style.css" rel="stylesheet">
+	<title>Cancellazione piatto</title>
+</head>
+<body>
+	<header><h1>Catering Demo</h1></header>
+	<br>
+	<br>
+    <h2>Piatto da cancellare:</h2>
+	<div class="scatola">
+		<h3>Nome:</h3>
+   		<span th:text="${piatto.nome}">nome</span><br>
+   		<h3>Descrizione:</h3>
+		<span th:text="${piatto.descrizione}">descrizione</span><br>
+	</div> 
+	<br>
+	<div>
+   		<a href="piatto.html" th:href="@{'/deletePiatto' + '/' + ${piatto.id} }" th:text="Elimina">Elimina</a>
+	</div>
+</body>
+</html>

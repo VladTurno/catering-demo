@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="/css/my-style.css" rel="stylesheet">
+	<title>Cancellazione persona</title>
+</head>
+<body>
+	<h1>Persona da cancellare:</h1>
+	<div>
+   		<span th:text="${persona.nome}">nome</span>
+		<span th:text="${persona.cognome}">cognome</span>
+		<span th:text="${persona.eta}">età</span>
+	</div> 
+	 <div>
+   		<a href="persona.html" th:href="@{'/deletePersona' + '/' + ${persona.id} }" th:text="Elimina">Elimina</a>
+	 </div>
+</body>
+</html>

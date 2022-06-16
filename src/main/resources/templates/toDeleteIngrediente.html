@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="static/css/my-style.css" rel="stylesheet">
+	<title>Cancellazione ingrediente</title>
+</head>
+<body>
+	<header><h1>Catering Demo</h1></header>
+	<br>
+	<br>
+    <h2>Ingrediente da cancellare:</h2>
+	<div class="scatola">
+		<h3>Nome:</h3>
+   		<span th:text="${ingrediente.nome}">nome</span><br>
+   		<h3>Origine:</h3>
+   		<span th:text="${ingrediente.origine}">origine</span><br>
+   		<h3>Descrizione:</h3>
+		<span th:text="${ingrediente.descrizione}">descrizione</span><br>
+	</div> 
+	<br>
+	<div>
+   		<a href="ingrediente.html" th:href="@{'/deleteIngrediente' + '/' + ${ingrediente.id} }" th:text="Elimina">Elimina</a>
+	</div>
+</body>
+</html>

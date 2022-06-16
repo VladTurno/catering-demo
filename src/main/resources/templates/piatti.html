@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="static/css/my-style.css" rel="stylesheet">
+	<title>Elenco piatti</title>
+</head>
+<body>
+	<header><h1>Catering Demo</h1></header>
+	<br>
+	<br>
+    <h2>Elenco piatti inseriti:</h2>
+	<br>
+	<div class="scatola">
+		<table>
+			<tr>
+				<th>Nome</th><th>Descrizione</th><th></th><th></th><th></th>
+			</tr>
+			<tr th:each="piatto : ${piatti}">
+			<td th:text="${piatto.nome}">nome</td>
+			<td th:text="${piatto.descrizione}">descrizione</td>
+			<td><a href="piatto.html" th:href="@{'/piatto' + '/' + ${piatto.id} }" th:text="dettagli">dettagli</a></td>
+			<td><a href="piatto.html" th:href="@{'/toUpdatePiatto' + '/' + ${piatto.id} }" th:text="modifica">modifica</a></td>
+			<td><a href="piatto.html" th:href="@{'/toDeletePiatto' + '/' + ${piatto.id} }" th:text="elimina">elimina</a></td>
+		</table>
+	</div>
+    <footer><a href="/">Torna alla HomePage</a></footer>
+</body>
+</html>

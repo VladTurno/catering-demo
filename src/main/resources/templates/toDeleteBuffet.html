@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="static/css/my-style.css" rel="stylesheet">
+	<title>Cancellazione buffet</title>
+</head>
+<body>
+	<header><h1>Catering Demo</h1></header>
+	<br>
+	<br>
+    <h2>Buffet da cancellare:</h2>
+	<div class="scatola">
+		<h3>Nome:</h3>
+   		<span th:text="${buffet.nome}">nome</span><br>
+   		<h3>Descrizione:</h3>
+		<span th:text="${buffet.descrizione}">descrizione</span><br>
+	</div> 
+	<br>
+	<div>
+   		<a href="buffet.html" th:href="@{'/deleteBuffet' + '/' + ${buffet.id} }" th:text="Elimina">Elimina</a>
+	</div>
+</body>
+</html>

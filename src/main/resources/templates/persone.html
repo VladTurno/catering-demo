@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<link href="/css/my-style.css" rel="stylesheet">
+	<title>Elenco persone</title>
+</head>
+<body>
+    <div>
+    	<h4>Elenco persone:</h4>
+		<table>
+			<tr>
+				<th>Nome</th><th>Cognome</th><th></th><th></th><th></th>
+			</tr>
+			<tr th:each="persona : ${persone}">
+			<td th:text="${persona.nome}">nome</td>
+			<td th:text="${persona.cognome}">cognome</td>
+			<td><a href="persona.html" th:href="@{'/persona' + '/' + ${persona.id} }" th:text="dettagli">dettagli</a></td>
+			<td><a href="persona.html" th:href="@{'/toUpdatePersona' + '/' + ${persona.id} }" th:text="modifica">modifica</a></td>
+			<td><a href="persona.html" th:href="@{'/toDeletePersona' + '/' + ${persona.id} }" th:text="elimina">elimina</a></td>
+		</table>
+    </div>
+    <footer><a href="/">Home</a></footer>
+</body>
+</html>
