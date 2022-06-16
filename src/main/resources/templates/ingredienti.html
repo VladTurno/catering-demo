@@ -21,7 +21,7 @@
 			<td th:text="${ingrediente.origine}">origine</td>
 			<td th:text="${ingrediente.descrizione}">descrizione</td>
 			<td><a href="ingrediente.html" th:href="@{'/ingrediente' + '/' + ${ingrediente.id} }" th:text="dettagli">dettagli</a></td>
-			<td><a href="ingrediente.html" th:href="@{'/toUpdateIngrediente' + '/' + ${ingrediente.id} }" th:text="modifica">modifica</a></td>
+			<td><a href="ingrediente.html" th:href="@{/toUpdateIngrediente}" th:text="modifica">modifica</a></td>
 			<td><a href="ingrediente.html" th:href="@{'/toDeleteIngrediente' + '/' + ${ingrediente.id} }" th:text="elimina">elimina</a></td>
 		</table>
 	</div>

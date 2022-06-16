@@ -20,7 +20,7 @@
 			<td th:text="${buffet.nome}">nome</td>
 			<td th:text="${buffet.chef}">chef</td>
 			<td><a href="buffet.html" th:href="@{'/buffet' + '/' + ${buffet.id} }" th:text="dettagli">dettagli</a></td>
-			<td><a href="buffet.html" th:href="@{'/toUpdateBuffet' + '/' + ${buffet.id} }" th:text="modifica">modifica</a></td>
+			<td><a href="buffet.html" th:href="@{/toUpdateBuffet}" th:text="modifica">modifica</a></td>
 			<td><a href="buffet.html" th:href="@{'/toDeleteBuffet' + '/' + ${buffet.id} }" th:text="elimina">elimina</a></td>
 		</table>
 	</div>

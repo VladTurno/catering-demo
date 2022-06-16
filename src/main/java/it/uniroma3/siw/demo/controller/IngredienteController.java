@@ -55,11 +55,9 @@ public class IngredienteController {
 		return "ingrediente.html";
 	}
 	
-	@GetMapping("/updateIngrediente/{id}")
-	public String updateIngrediente(@PathVariable("id") Long id, Model model) {
-		Ingrediente ingrediente = service.findById(id);
-		model.addAttribute("ingrediente", ingrediente);
-		return "ingrediente.html";
+	@GetMapping("/toUpdateIngrediente")
+	public String toUpdateIngrediente(Model model) {
+		return "toUpdateIngrediente.html";
 	}
 	
 	@GetMapping("/toDeleteIngrediente/{id}")

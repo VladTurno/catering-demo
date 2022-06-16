@@ -55,11 +55,9 @@ public class PiattoController {
 		return "piatto.html";
 	}
 	
-	@GetMapping("/updatePiatto/{id}")
-	public String updatePiatto(@PathVariable("id") Long id, Model model) {
-		Piatto piatto = service.findById(id);
-		model.addAttribute("piatto", piatto);
-		return "piatto.html";
+	@GetMapping("/toUpdatePiatto")
+	public String toUpdatePiatto(Model model) {
+		return "toUpdatePiatto.html";
 	}
 	
 	@GetMapping("/toDeletePiatto/{id}")

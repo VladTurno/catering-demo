@@ -20,7 +20,7 @@
 			<td th:text="${chef.nome}">nome</td>
 			<td th:text="${chef.cognome}">cognome</td>
 			<td><a href="chef.html" th:href="@{'/chef' + '/' + ${chef.id} }" th:text="dettagli">dettagli</a></td>
-			<td><a href="chef.html" th:href="@{'/toUpdateChef' + '/' + ${chef.id} }" th:text="modifica">modifica</a></td>
+			<td><a href="chef.html" th:href="@{/toUpdateChef}" th:text="modifica">modifica</a></td>
 			<td><a href="chef.html" th:href="@{'/toDeleteChef' + '/' + ${chef.id} }" th:text="elimina">elimina</a></td>
 		</table>
 	</div>

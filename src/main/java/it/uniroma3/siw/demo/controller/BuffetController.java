@@ -55,11 +55,9 @@ public class BuffetController {
 		return "buffet.html";
 	}
 	
-	@GetMapping("/updateBuffet/{id}")
-	public String updateBuffet(@PathVariable("id") Long id, Model model) {
-		Buffet buffet = service.findById(id);
-		model.addAttribute("buffet", buffet);
-		return "buffet.html";
+	@GetMapping("/toUpdateBuffet")
+	public String toUpdateBuffet(Model model) {
+		return "toUpdateBuffet.html";
 	}
 	
 	@GetMapping("/toDeleteBuffet/{id}")

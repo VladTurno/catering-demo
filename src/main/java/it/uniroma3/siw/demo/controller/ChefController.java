@@ -55,11 +55,9 @@ public class ChefController {
 		return "chef.html";
 	}
 	
-	@GetMapping("/updateChef/{id}")
-	public String updateChef(@PathVariable("id") Long id, Model model) {
-		Chef chef = service.findById(id);
-		model.addAttribute("chef", chef);
-		return "chef.html";
+	@GetMapping("/toUpdateChef")
+	public String toUpdateChef(Model model) {
+		return "toUpdateChef.html";
 	}
 	
 	@GetMapping("/toDeleteChef/{id}")
