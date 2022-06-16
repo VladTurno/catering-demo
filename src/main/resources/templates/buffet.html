@@ -16,7 +16,11 @@
 		<h3>Descrizione:</h3>
 		<span th:text="${buffet.descrizione}">descrizione</span><br>
 		<h3>Chef:</h3>
+		<a href="chef.html" th:href="@{'/chef' + '/' + ${buffet.chef.getId()} }">
+		<span th:text="${buffet.chef.getNome()}">nomeChef</span>&nbsp;<span th:text="${buffet.chef.getCognome()}">cognomChef</span><br>
+		</a>
 		<h3>Portate:</h3>
+		<span>lista delle portate - not yet implemented</span><br>
    	</div>
     <footer><a href="/">Torna alla HomePage</a></footer>
 </body>

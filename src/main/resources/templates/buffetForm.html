@@ -26,7 +26,12 @@
 	    		<span>Descrizione:</span><br>
 	    		<span><input type="text" th:field="*{descrizione}" /></span><br>
 	    		<span th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></span>
-	 		 </div> 
+	 		 </div>
+	 		 <div>
+	    		<span>id dello Chef:</span><br>
+	    		<span><input type="text" th:field="*{chef}"  /></span>
+	    		<span th:if="${#fields.hasErrors('chef')}" th:errors="*{chef}"></span>
+	 		 </div>   
 	 		 <div>
 	    		<span><button type="submit">Conferma</button></span>
 	  		 </div>

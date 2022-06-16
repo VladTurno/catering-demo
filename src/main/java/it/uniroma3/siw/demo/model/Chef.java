@@ -37,6 +37,10 @@ public class Chef {
 		
 	}
 	
+	public Chef(String nome) {
+		this.nome = nome;
+	}
+	
 	public Chef(String nome, String cognome, String nazionalita) {
 		this.nome = nome;
 		this.cognome = cognome;

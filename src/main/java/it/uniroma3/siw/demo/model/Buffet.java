@@ -38,6 +38,12 @@ public class Buffet {
 		
 	}
 	
+	public Buffet(String nome,String descrizione, String chef) {
+		this.nome = nome;
+		this.descrizione = descrizione;
+		this.chef = new Chef(nome);
+	}
+	
 	public Buffet(String nome,String descrizione, Chef chef) {
 		this.nome = nome;
 		this.descrizione = descrizione;
