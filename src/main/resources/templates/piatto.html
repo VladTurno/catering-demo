@@ -11,10 +11,14 @@
     <h2>Scheda piatto:</h2>
 	<br>
 	<div class="scatola">
+		<h3>Id:</h3>
+		<span th:text="${piatto.id}">id</span><br>
 		<h3>Nome:</h3>
 		<span th:text="${piatto.nome}">nome</span><br>
 		<h3>Descrizione:</h3>
 		<span th:text="${piatto.descrizione}">descrizione</span><br>
+		<h3>Ingredienti:</h3>
+		<span>lista degli ingredienti - not yet implemented</span><br>
     </div>
     <footer><a href="/">Torna alla HomePage</a></footer>
 </body>
